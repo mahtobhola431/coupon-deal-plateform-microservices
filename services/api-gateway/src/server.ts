@@ -1,9 +1,9 @@
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: "../../.env" });
 
 import app from "./app";
 
-const PORT = process.env.API_GATEWAY_PORT || 4000;
+const PORT = process.env.API_GATEWAY_PORT || 4004;
 
 app.listen(PORT, () => {
   console.log(`API Gateway running on port ${PORT}`);

@@ -1,10 +1,11 @@
 import dotenv from "dotenv";
-dotenv.config();
+
+dotenv.config({ path: "../../.env" });
 
 import app from "./app";
 
-const PORT = process.env.API_GATEWAY_PORT || 4000;
+const PORT = process.env.ANALYTICS_SERVICE_PORT || 4006;
 
 app.listen(PORT, () => {
-  console.log(`analytics service running on port ${PORT}`);
+  console.log(`Analytics Service running on port ${PORT}`);
 });
